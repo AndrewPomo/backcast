@@ -4,6 +4,7 @@ var Videos = Backbone.Collection.extend({
   url: 'https://www.googleapis.com/youtube/v3/search',
   key: window.YOUTUBE_API_KEY,
   
+  
   parse: function(response){
     return response.items;
   },
@@ -17,12 +18,6 @@ var Videos = Backbone.Collection.extend({
         videoEmbeddable: true,
         part: 'snippet',
         type: 'video'
-      },
-      success: function (data) {
-        // console.log(data);
-      },
-      error: function (data) {
-        // console.log("fail");
       }
     });
   }
