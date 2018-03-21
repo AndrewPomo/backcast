@@ -20,5 +20,6 @@ var Videos = Backbone.Collection.extend({
         type: 'video'
       }
     });
-  }
+    // }), 500);
+  } 
 });
